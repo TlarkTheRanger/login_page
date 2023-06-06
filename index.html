@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css"  href="style.css"
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <input type="text"  placeholder="Username"  name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Login</button>  
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var username = document.querySelector('input[name="username"]').value;
+        var password = document.querySelector('input[name="password"]').value;
+
+        // Perform validation
+        if (username === 'admin' && password === 'password') {
+            alert('Login successful');
+            // Redirect to another page or perform additional actions
+        } else {
+            alert('Invalid username or password');
+        }
+        }
+    );
+</script>
